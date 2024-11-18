@@ -1,0 +1,67 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+
+  --space-100: 0.5rem;
+  --space-150: 0.75rem;
+  --space-200: 1rem;
+  --space-300: 1.5rem;
+  --space-400: 2rem;
+  --space-500: 2.5rem;
+  --space-600: 3rem;
+  --space-1600: 8rem;
+
+  /* @link https://utopia.fyi/clamp/calculator?a=375,1440,36—40 */
+  --fluid-36-40: clamp(2.25rem, 2.162rem + 0.3756vw, 2.5rem);
+
+  /* @link https://utopia.fyi/clamp/calculator?a=375,1440,32—40 */
+  --fluid-32-40: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
+}
+
+@font-face {
+  font-family: 'Young Serif';
+  src: url('../assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('../assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+.txt-preset-1 {
+  font-family: 'Young Serif';
+  font-size: var(--fluid-36-40);
+  line-height: 1;
+}
+
+.txt-preset-2 {
+  font-family: 'Young Serif';
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.txt-preset-3 {
+  font-family: 'Outfit';
+  font-size: 1.25rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.txt-preset-4 {
+  font-family: 'Outfit';
+  line-height: 1.5;
+}
+
+.txt-preset-4--bold {
+  font-weight: 700;
+}
