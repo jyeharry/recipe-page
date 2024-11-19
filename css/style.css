@@ -38,30 +38,117 @@
   font-style: normal;
 }
 
-.txt-preset-1 {
+body {
+  background-color: var(--stone-100);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Young Serif';
+}
+
+p {
+  color: var(--stone-600);
+}
+
+.txt-preset-1, h1 {
   font-family: 'Young Serif';
   font-size: var(--fluid-36-40);
   line-height: 1;
+  font-weight: 400;
 }
 
-.txt-preset-2 {
+.txt-preset-2, h2 {
   font-family: 'Young Serif';
   font-size: 1.75rem;
   line-height: 1;
 }
 
-.txt-preset-3 {
+.txt-preset-3, .recipe__callout-heading {
   font-family: 'Outfit';
   font-size: 1.25rem;
   line-height: 1;
   font-weight: 600;
+  color: var(--rose-800);
 }
 
-.txt-preset-4 {
+.txt-preset-4, p {
   font-family: 'Outfit';
   line-height: 1.5;
 }
 
 .txt-preset-4--bold {
   font-weight: 700;
+}
+
+.recipe {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-500);
+  max-width: 46rem;
+  margin: auto;
+  padding-block-end: var(--space-500);
+
+  & > :first-child:where(:not(.recipe__hero)) {
+    margin-block-start: var(--space-500);
+  }
+
+  & > *:where(:not(.recipe__hero)) {
+    margin-inline: var(--fluid-32-40);
+  }
+
+  @media (min-width: 46rem) {
+    margin-block: var(--space-1600);
+    border-radius: var(--space-300);
+  }
+}
+
+.recipe__hero {
+  @media (min-width: 46rem) {
+    margin-block-start: var(--space-500);
+    margin-inline: var(--fluid-32-40);
+  }
+}
+
+.recipe__hero-img {
+  @media (min-width: 46rem) {
+    border-radius: var(--space-150);
+  }
+}
+
+.recipe__content {
+  display: flex;
+  gap: var(--space-400);
+  flex-direction: column;
+}
+
+.recipe__intro {
+  color: var(--stone-900);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-300);
+}
+
+.recipe__callout {
+  background-color: var(--rose-50);
+  padding: var(--space-300);
+  border-radius: var(--space-150);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-200);
+}
+
+.recipe__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-100);
+  padding-inline-start: var(--space-300);
+}
+
+.recipe__list--rose-800 > li {
+  padding-inline-start: var(--space-200);
+}
+
+.recipe__list--rose-800 > li::marker {
+  color: var(--rose-800);
 }
