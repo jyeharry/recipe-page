@@ -61,6 +61,7 @@ hr {
   font-family: 'Young Serif';
   font-size: 1.75rem;
   line-height: 1;
+  font-weight: 400;
 }
 
 .txt-preset-3, .recipe__callout-heading {
