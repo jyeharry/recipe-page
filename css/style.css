@@ -82,8 +82,6 @@ hr {
 }
 
 .recipe__container {
-  padding: 0;
-
   @media (min-width: 46rem) {
     padding: var(--space-1600) var(--space-600);
   }
