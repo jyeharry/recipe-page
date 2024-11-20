@@ -94,6 +94,7 @@ hr {
   gap: var(--space-500);
   max-width: 46rem;
   place-self: center;
+  margin: auto;
   padding-block-end: var(--space-500);
   color: var(--stone-600);
 
