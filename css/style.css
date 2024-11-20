@@ -46,8 +46,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Young Serif';
 }
 
-p {
-  color: var(--stone-600);
+hr {
+  border: 0.5px solid var(--stone-150);
 }
 
 .txt-preset-1, h1 {
@@ -71,13 +71,22 @@ p {
   color: var(--rose-800);
 }
 
-.txt-preset-4, p {
+.txt-preset-4, body {
   font-family: 'Outfit';
   line-height: 1.5;
+  font-weight: 400;
 }
 
 .txt-preset-4--bold {
   font-weight: 700;
+}
+
+.recipe__container {
+  padding: 0;
+
+  @media (min-width: 46rem) {
+    padding: var(--space-1600) var(--space-600);
+  }
 }
 
 .recipe {
@@ -86,8 +95,9 @@ p {
   flex-direction: column;
   gap: var(--space-500);
   max-width: 46rem;
-  margin: auto;
+  place-self: center;
   padding-block-end: var(--space-500);
+  color: var(--stone-600);
 
   & > :first-child:where(:not(.recipe__hero)) {
     margin-block-start: var(--space-500);
@@ -98,7 +108,6 @@ p {
   }
 
   @media (min-width: 46rem) {
-    margin-block: var(--space-1600);
     border-radius: var(--space-300);
   }
 }
@@ -143,12 +152,58 @@ p {
   flex-direction: column;
   gap: var(--space-100);
   padding-inline-start: var(--space-300);
-}
 
-.recipe__list--rose-800 > li {
-  padding-inline-start: var(--space-200);
+  & > li {
+    padding-inline-start: var(--space-200);
+  }
+
+  & > li::marker {
+    color: var(--brown-800);
+  }
 }
 
 .recipe__list--rose-800 > li::marker {
   color: var(--rose-800);
+}
+
+.recipe__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-300);
+}
+
+.recipe__section-heading {
+  color: var(--brown-800);
+}
+
+.recipe__table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recipe__table-row {
+  display: flex;
+  gap: var(--space-200);
+  padding-inline: var(--space-400);
+
+  &:not(:first-child) {
+    padding-block-start: var(--space-150);
+  }
+
+  &:not(:last-child) {
+    padding-block-end: var(--space-150);
+    border-bottom: 0.5px solid var(--stone-150);
+  }
+}
+
+.recipe__table-th {
+  flex: 100%;
+  text-align: start;
+}
+
+.recipe__table-td {
+  flex: 100%;
+  text-align: start;
+  color: var(--brown-800);
 }
